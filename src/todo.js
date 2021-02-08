@@ -38,20 +38,20 @@ const Todo = () => {
     }
 
     return ( 
-        <>
-        <form onSubmit={(e) => handleSubmit(e)}>
-            <div>
-                <input type='text' value={text} onChange={(e) => handleChange(e)}/>
-                <button type='submit'>enter</button>  
-                <select onChange={(e)=> statusHandler(e)}>
-                    <option value='all'>All</option>
-                    <option value='completed'>Completed</option>
-                    <option value='uncompleted'>Uncompleted</option>
-                </select>             
-            </div>
-        </form>
+        <div className='formContainer'>
+            <form onSubmit={(e) => handleSubmit(e)}>
+                <div className='inputContainer'>
+                    <input type='text' value={text} onChange={(e) => handleChange(e)}/>
+                    <button type='submit'><i class="fas fa-plus"></i></button>  
+                    <select onChange={(e)=> statusHandler(e)}>
+                        <option value='all'>All</option>
+                        <option value='completed'>Completed</option>
+                        <option value='uncompleted'>Uncompleted</option>
+                    </select>             
+                </div>
+            </form>
         <List list={list} setList={setList} text={text} setText={setText} filterList={filterList}/>
-        </>
+        </div>
    )
 }
 export default Todo 

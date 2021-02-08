@@ -22,16 +22,18 @@ const List = ({list, setList, filterList}) => {
     }
 
     return (
-       <div>
-           <ul>
-            {filterList.map((el) => {
-                const {text, id, completed} = el
-                return (
-                    <li className={completed ? 'completed' : 'uncompleted'} key={id}>{text}<button onClick={() => handleClick(id)}>delete</button><button onClick={() => handleCompleted(id)}>completed</button></li>
-                )
-            })}
-            </ul>
-       </div>
+        <ul>
+        {filterList.map((el) => {
+            const {text, id, completed} = el
+            return (
+                <div key={id} className='listContainer'>
+                    <li className={completed ? 'completed' : 'uncompleted'}>{text}</li>
+                    <button className='completedBtn'onClick={() => handleCompleted(id)}><i class="fas fa-check"></i></button>
+                    <button className='deleteBtn' onClick={() => handleClick(id)}><i class="fas fa-trash"></i></button>
+                </div>
+            )    
+        })}
+        </ul>
     )
 }
 

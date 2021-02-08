@@ -1,3 +1,142 @@
+#root {
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+  
+*::-webkit-scrollbar-track {
+    
+}
+
+*::-webkit-scrollbar-track-button {
+    width: 10px;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+    }
+
+.formContainer {
+    margin: 10%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(49, 49, 49, 0.9);
+    height: 20rem;
+    border-radius: 5%;
+    border: solid 5px black;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+form {
+    display: flex;
+}
+
+.inputContainer {
+    width: 100%;
+}
+
+form input {   
+    border: solid 1px black;
+    background-color: black;
+    border-radius: 4px 0px 0px 4px;
+    padding: 2%;
+    color: white;
+    outline: none;
+    transition: 0.3s all ease-in-out;
+    width: 45%;
+    font-family: 'Cutive Mono', monospace;
+}
+
+form input:focus {
+    border: solid 1px white;
+}
+
+form button {
+    border: solid 1px rgb(0, 140, 255);
+    background-color: rgb(0, 140, 255);
+    padding: 2%;
+    border-radius: 0px 4px 4px 0px;
+    color: white;
+    width: auto;
+    outline: none;
+    transition: 0.2s all ease-in-out;
+    margin-right: 4px;
+    font-family: 'Cutive Mono', monospace;
+}
+
+form button:hover {
+    opacity: 0.5;
+}
+
+form select {
+    padding: 2%;
+    border-radius: 4px;
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+    width: auto;
+    font-family: 'Cutive Mono', monospace;
+}
+
+.listContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+ul {
+    list-style: none;
+    font-size: 1.2em;
+    padding: 1%;
+}
+
+.listContainer li {
+    font-family: 'Cutive Mono', monospace;
+    padding: 2%;
+    background-color: black;
+    color: white;
+    width: 100%;
+    border-radius: 4px 0px 0px 4px;
+}
+
 li.completed {
-    color: grey;
+    opacity: 0.5;
+    transition: 0.3s all ease-in-out;
+}
+
+li.uncompleted {
+    transition: 0.3s all ease-in-out;
+}
+
+.completedBtn {
+    background-color: green;
+    color: white;
+    border: solid 1px green;
+    padding: 2.5%;
+    transition: 0.3s all ease-in-out;
+    outline: none;
+}
+
+.completedBtn:hover {
+    opacity: 0.5;
+}
+
+.deleteBtn {
+    background-color: red;
+    color: white;
+    border: solid 1px red;
+    padding: 3%;
+    transition: 0.3s all ease-in-out;
+    outline: none;
+}
+
+.deleteBtn:hover {
+    opacity: 0.5;
 }
